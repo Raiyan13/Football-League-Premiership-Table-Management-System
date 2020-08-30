@@ -1,0 +1,55 @@
+This project is a console application for the management of a premiership table for an Australian Rules Football League.
+
+In this particular league, there are 8 teams, with names of t1-t8. Goals of teams presented by g1-g8. 
+Behind score(score befor game) presented by b1-b8.Position in the table is determined on the basis of 
+premiership points. Teams with the same number of premiership points are ranked according to percentage. 
+Premiership points are awarded for each game –2 to the winning team, 0 to the losing team and if the game 
+is drawn, 1 to each team. The outcome of a game is determined using the points scored by each team, where 
+points = goals*6+behinds. The percentage for each team is calculated as follows:
+
+                                percentage = score for / (score for + score against)
+Where,
+• score for is the total number of points scored by the team in all games played so far and
+• score against is the total number of points that the opposing teams have scored in all games played so far.
+
+The application’s Controller class is to execute (using a switch statement) the following command
+options:
+
+1. Display available commands.
+2. Display current table.
+3. Display selected statistics.
+4. Display the entry for a specified team.
+5. Display entries for teams with the same points as a specified team.
+6. Add a new result.
+7. Exit the application.
+
+For 3, the statistics to be generated are
+1. The team that has scored the highest number of points.
+2. The team that has had the lowest number of points scored against them.
+3. The average value of the points scored for all teams.
+
+In the unlikely event that two or more teams have the highest score for or the lowest score against, it
+just return the first of the teams.
+
+For 6, the premiership table will be updated.
+
+As it is a console application, the user will need to be prompted to enter a command and its arguments
+(if any). 
+
+After runing:
+Available commands are:
+1.For help press 0
+2.For display entries press 1
+3.For display selected statistics press 2
+4.For lookup a specified team press 3 and enter team name.Example: 3 t1
+5.For finding teams with same points as a specified team press 4 and enter team name.Example: 4 t8
+6.For adding a new result press 5 and enter team names,scores before match,and goals.
+For Example: 5 t1 2 12 t4 1 9 (team, number of goal, score before match for both teams) 
+7.For quit press 9.
+
+Sample Input:
+3 t4
+
+Sample Output:
+Pos    Team    Played    Points     %     Won    Lost    Drawn     PlayedFor     PlayedAgainst
+ 4      t4       2         2      48.8     1       1       0           59              62
